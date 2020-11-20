@@ -91,12 +91,9 @@ namespace Tracking_System
                 sqlcom.Parameters.AddWithValue("@mac", cl_mac);
                 sqlcom.Parameters.AddWithValue("@user_name", cl_name);
                 con.Open();
-
                 modified = (int)sqlcom.ExecuteScalar();
-
                 if (con.State == System.Data.ConnectionState.Open)
                     con.Close();
-                //return modified;
             }
         }
 
@@ -292,12 +289,15 @@ namespace Tracking_System
                 {
                     Request req = new Request();
                     req.Requster_name = client_data[1];
+                    req.sql_id = modified;
                     req.eng_name = Get_eng_name();
                     req.Show();
                 }
                 catch (Exception)
                 {
-
+                    Request req = new Request();
+                    req.eng_name = Get_eng_name();
+                    req.Show();
                 }
 
             }
@@ -326,7 +326,6 @@ namespace Tracking_System
             {
                 Request req = new Request();
                 req.Requster_name = client_data[1];
-                req.sql_id = modified;
                 req.eng_name = eng_name;
                 req.Show();
             }

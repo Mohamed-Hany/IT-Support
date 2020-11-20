@@ -38,18 +38,43 @@ namespace Tracking_System
         }
         public void Save_session_comment()
         {
+            if (sql_id != 0)
+            {
                 SqlConnection conn = new SqlConnection(connetionString);
                 string sql =
-                "UPDATE Tracking_System.dbo.Sessions_session_info SET comment='" + description_Box1.Text +"' WHERE id ='" + sql_id + "'";
+                "UPDATE Tracking_System.dbo.Sessions_session_info SET comment='" + description_Box1.Text + "' WHERE id ='" + sql_id + "'";
                 SqlCommand sqlcom = new SqlCommand(sql, conn);
                 conn.Open();
                 sqlcom.ExecuteNonQuery();
                 conn.Close();
+            }
+            else
+            {
+                SqlConnection con = new SqlConnection(connetionString);
+                string sql = "insert into Tracking_System.dbo.Sessions_session_info(engineer_name,ip_add,mac,user_name,comment) output INSERTED.ID values(@engineer_name,@ip_add,@mac,@user_name,@comment)";
+                using (SqlCommand sqlcom = new SqlCommand(sql, con))
+                {
+                    sqlcom.Parameters.AddWithValue("@engineer_name", txt_eng_name.Text);
+                    sqlcom.Parameters.AddWithValue("@ip_add", "0.0.0.0");
+                    sqlcom.Parameters.AddWithValue("@mac", "ffffffffffff");
+                    sqlcom.Parameters.AddWithValue("@user_name", txt_requester_name.Text);
+                    sqlcom.Parameters.AddWithValue("@comment", description_Box1.Text);
+                    con.Open();
+                    sqlcom.ExecuteScalar();
+                    con.Close();
+                }
+            }
+
         }
         private void btn_save_Click(object sender, EventArgs e)
         {
             Save_session_comment();
-            post();
+            for (int i = 0; i < int.Parse(Dup_txt_box.Text); i++)
+            {
+                MessageBox.Show(i.ToString());
+                //post();
+            } 
+            this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
