@@ -1,0 +1,44 @@
+D:\C#_Projects\Tracking_System_Server\obj\Release\Tracking_System.exe
+D:\C#_Projects\Tracking_System_Server\obj\Release\Tracking_System.pdb
+D:\C#_Projects\Tracking_System_Server\bin\Release\Tracking_System.exe
+D:\C#_Projects\Tracking_System_Server\bin\Release\Tracking_System.pdb
+D:\C#_Projects\Tracking_System_Server\obj\Release\IT Support Server.csprojResolveAssemblyReference.cache
+D:\C#_Projects\Tracking_System_Server\obj\Release\Tracking_System.Server_Form.resources
+D:\C#_Projects\Tracking_System_Server\obj\Release\Tracking_System.Properties.Resources.resources
+D:\C#_Projects\Tracking_System_Server\obj\Release\IT Support Server.csproj.GenerateResource.Cache
+D:\C#_Projects\IT Support Server\bin\Release\IT Support Server.exe
+D:\C#_Projects\IT Support Server\bin\Release\IT Support Server.pdb
+D:\C#_Projects\IT Support Server\obj\Release\Tracking_System.Server_Form.resources
+D:\C#_Projects\IT Support Server\obj\Release\Tracking_System.Properties.Resources.resources
+D:\C#_Projects\IT Support Server\obj\Release\IT Support Server.csproj.GenerateResource.Cache
+D:\C#_Projects\IT Support Server\obj\Release\IT Support Server.exe
+D:\C#_Projects\IT Support Server\obj\Release\IT Support Server.pdb
+D:\C#_Projects\IT Support Server\bin\Release\IT Support Server.exe.config
+D:\C#_Projects\IT Support Server\obj\Release\Tracking_System.login.resources
+D:\C#_Projects\IT Support Server\obj\Release\IT Support Server.csprojResolveAssemblyReference.cache
+D:\C#_Projects\IT Support Server - Copy\bin\Release\IT Support Server.exe.config
+D:\C#_Projects\IT Support Server - Copy\obj\Release\IT Support Server.exe
+D:\C#_Projects\IT Support Server - Copy\obj\Release\IT Support Server.pdb
+D:\C#_Projects\IT Support Server - Copy\obj\Release\IT Support Server.csprojResolveAssemblyReference.cache
+D:\C#_Projects\IT Support Server - Copy\obj\Release\Tracking_System.login.resources
+D:\C#_Projects\IT Support Server - Copy\obj\Release\Tracking_System.Server_Form.resources
+D:\C#_Projects\IT Support Server - Copy\obj\Release\Tracking_System.Properties.Resources.resources
+D:\C#_Projects\IT Support Server - Copy\obj\Release\IT Support Server.csproj.GenerateResource.Cache
+D:\C#_Projects\IT Support Server - Copy\bin\Release\IT Support Server.exe
+D:\C#_Projects\IT Support Server - Copy\bin\Release\IT Support Server.pdb
+D:\C#_Projects\IT Support Server - Copy\obj\Release\Tracking_System.Request.resources
+D:\C#_Projects\IT Support Server - New\bin\Release\IT Support Server.exe.config
+D:\C#_Projects\IT Support Server - New\obj\Release\IT Support Server.exe
+D:\C#_Projects\IT Support Server - New\obj\Release\IT Support Server.pdb
+D:\C#_Projects\IT Support Server - New\obj\Release\Tracking_System.login.resources
+D:\C#_Projects\IT Support Server - New\obj\Release\Tracking_System.Request.resources
+D:\C#_Projects\IT Support Server - New\obj\Release\Tracking_System.Server_Form.resources
+D:\C#_Projects\IT Support Server - New\obj\Release\Tracking_System.Properties.Resources.resources
+D:\C#_Projects\IT Support Server - New\obj\Release\IT Support Server.csproj.GenerateResource.Cache
+D:\C#_Projects\IT Support Server - New\bin\Release\IT Support Server.exe
+D:\C#_Projects\IT Support Server - New\bin\Release\IT Support Server.pdb
+D:\C#_Projects\IT Support Server - New\obj\Release\IT Support Server.csprojResolveAssemblyReference.cache
+D:\C#_Projects\IT Support Server - New\obj\Release\CustomAlertBoxDemo.Form_Alert.resources
+D:\C#_Projects\IT Support Server\obj\Release\CustomAlertBoxDemo.Form_Alert.resources
+D:\C#_Projects\IT Support Server\obj\Release\Tracking_System.Request.resources
+D:\C#_Projects\IT Support Server\obj\Release\Tracking_System.History.resources
