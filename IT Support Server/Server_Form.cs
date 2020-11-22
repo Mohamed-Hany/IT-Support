@@ -285,20 +285,27 @@ namespace Tracking_System
                 vnc(txt_new_ip.Text);
                 timer1.Stop();
                 old_ip = txt_new_ip.Text;
-                try
+                if ((Application.OpenForms["Request"] as Request) != null)
                 {
-                    Request req = new Request();
-                    req.Requster_name = client_data[1];
-                    req.sql_id = modified;
-                    req.eng_name = Get_eng_name();
-                    req.Show();
+                    //Form is already open
                 }
-                catch (Exception)
-                {
-                    Request req = new Request();
-                    req.eng_name = Get_eng_name();
-                    req.Show();
-                }
+                else
+                {             
+                    try
+                    {
+                        Request req = new Request();
+                        req.Requster_name = client_data[1];
+                        req.sql_id = modified;
+                        req.eng_name = Get_eng_name();
+                        req.Show();
+                    }
+                    catch (Exception)
+                    {
+                        Request req = new Request();
+                        req.eng_name = Get_eng_name();
+                        req.Show();
+                    }
+               }
 
             }
             else
@@ -322,18 +329,25 @@ namespace Tracking_System
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
+            if ((Application.OpenForms["Request"] as Request) != null)
             {
-                Request req = new Request();
-                req.Requster_name = client_data[1];
-                req.eng_name = eng_name;
-                req.Show();
+                
             }
-            catch (Exception)
+            else
             {
-                Request req = new Request();
-                req.eng_name = eng_name;
-                req.Show();
+                try
+                {
+                    Request req = new Request();
+                    req.Requster_name = client_data[1];
+                    req.eng_name = Get_eng_name();
+                    req.Show();
+                }
+                catch (Exception)
+                {
+                    Request req = new Request();
+                    req.eng_name = Get_eng_name();
+                    req.Show();
+                }
             }
         }
 

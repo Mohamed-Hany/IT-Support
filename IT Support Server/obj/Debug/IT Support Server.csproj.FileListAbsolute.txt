@@ -47,3 +47,16 @@ D:\IT-Support\IT Support Server\obj\Debug\Tracking_System.Request.resources
 D:\IT-Support\IT Support Server\obj\Debug\Tracking_System.Server_Form.resources
 D:\IT-Support\IT Support Server\obj\Debug\Tracking_System.Properties.Resources.resources
 D:\IT-Support\IT Support Server\obj\Debug\IT Support Server.csproj.GenerateResource.Cache
+D:\C#_Projects\IT-Support\IT Support Server\bin\Debug\IT Support Server.exe.config
+D:\C#_Projects\IT-Support\IT Support Server\obj\Debug\IT Support Server.exe
+D:\C#_Projects\IT-Support\IT Support Server\obj\Debug\IT Support Server.pdb
+D:\C#_Projects\IT-Support\IT Support Server\obj\Debug\IT Support Server.csprojResolveAssemblyReference.cache
+D:\C#_Projects\IT-Support\IT Support Server\obj\Debug\CustomAlertBoxDemo.Form_Alert.resources
+D:\C#_Projects\IT-Support\IT Support Server\obj\Debug\Tracking_System.History.resources
+D:\C#_Projects\IT-Support\IT Support Server\obj\Debug\Tracking_System.login.resources
+D:\C#_Projects\IT-Support\IT Support Server\obj\Debug\Tracking_System.Request.resources
+D:\C#_Projects\IT-Support\IT Support Server\obj\Debug\Tracking_System.Server_Form.resources
+D:\C#_Projects\IT-Support\IT Support Server\obj\Debug\Tracking_System.Properties.Resources.resources
+D:\C#_Projects\IT-Support\IT Support Server\obj\Debug\IT Support Server.csproj.GenerateResource.Cache
+D:\C#_Projects\IT-Support\IT Support Server\bin\Debug\IT Support Server.exe
+D:\C#_Projects\IT-Support\IT Support Server\bin\Debug\IT Support Server.pdb

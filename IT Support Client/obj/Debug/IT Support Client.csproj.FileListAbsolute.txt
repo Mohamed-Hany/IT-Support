@@ -16,3 +16,12 @@ D:\IT-Support\IT Support Client\obj\Debug\Tracking_System_Client.Properties.Reso
 D:\IT-Support\IT Support Client\obj\Debug\IT Support Client.csproj.GenerateResource.Cache
 D:\IT-Support\IT Support Client\obj\Debug\IT Support Client.exe
 D:\IT-Support\IT Support Client\obj\Debug\IT Support Client.pdb
+D:\C#_Projects\IT-Support\IT Support Client\bin\Debug\IT Support Client.exe.config
+D:\C#_Projects\IT-Support\IT Support Client\bin\Debug\IT Support Client.exe
+D:\C#_Projects\IT-Support\IT Support Client\bin\Debug\IT Support Client.pdb
+D:\C#_Projects\IT-Support\IT Support Client\obj\Debug\IT Support Client.csprojResolveAssemblyReference.cache
+D:\C#_Projects\IT-Support\IT Support Client\obj\Debug\Tracking_System_Client.Client_Form.resources
+D:\C#_Projects\IT-Support\IT Support Client\obj\Debug\Tracking_System_Client.Properties.Resources.resources
+D:\C#_Projects\IT-Support\IT Support Client\obj\Debug\IT Support Client.csproj.GenerateResource.Cache
+D:\C#_Projects\IT-Support\IT Support Client\obj\Debug\IT Support Client.exe
+D:\C#_Projects\IT-Support\IT Support Client\obj\Debug\IT Support Client.pdb

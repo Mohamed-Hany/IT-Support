@@ -28,8 +28,7 @@ namespace Tracking_System
             string responseAsString = await responseMessage.Content.ReadAsStringAsync();
             if (responseAsString.Contains("successfully"))
             {
-                MessageBox.Show("Your request saved successfully");
-                this.Close();
+                //MessageBox.Show("Your request saved successfully");
             }
             else
             {
@@ -69,11 +68,22 @@ namespace Tracking_System
         private void btn_save_Click(object sender, EventArgs e)
         {
             Save_session_comment();
-            for (int i = 0; i < int.Parse(Dup_txt_box.Text); i++)
+            if (Dup_txt_box.Text=="" || Dup_txt_box.Text == "0")
             {
-                MessageBox.Show(i.ToString());
-                //post();
-            } 
+                Dup_txt_box.Text = "1";
+                for (int i = 0; i < int.Parse(Dup_txt_box.Text); i++)
+                {
+                    post();
+                }
+            }
+            else
+            {
+                for (int i = 0; i < int.Parse(Dup_txt_box.Text); i++)
+                {
+                    post();
+                }
+            }
+
             this.Close();
         }
 
