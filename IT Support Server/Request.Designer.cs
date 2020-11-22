@@ -214,8 +214,12 @@
             this.Controls.Add(this.txt_requester_name);
             this.Controls.Add(this.lbl_user);
             this.Controls.Add(this.comboBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Request";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Request ";
             this.Load += new System.EventHandler(this.Request_Load);
             this.ResumeLayout(false);

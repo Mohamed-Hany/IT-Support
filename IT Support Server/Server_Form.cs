@@ -246,6 +246,7 @@ namespace Tracking_System
 
         private void Exit_Click(object sender, EventArgs e)
         {
+            notifyIcon1.Visible = false;
             Environment.Exit(0);
         }
 
@@ -287,7 +288,8 @@ namespace Tracking_System
                 old_ip = txt_new_ip.Text;
                 if ((Application.OpenForms["Request"] as Request) != null)
                 {
-                    //Form is already open
+                    Application.OpenForms["Request"].Activate();
+                    WindowState = FormWindowState.Normal;
                 }
                 else
                 {             
@@ -317,7 +319,7 @@ namespace Tracking_System
 
         private void Server_Form_FormClosed(object sender, FormClosedEventArgs e)
         {
-            notifyIcon1.Dispose();
+            notifyIcon1.Visible=false;
             Environment.Exit(0);
         }
 
@@ -331,7 +333,8 @@ namespace Tracking_System
         {
             if ((Application.OpenForms["Request"] as Request) != null)
             {
-                
+                Application.OpenForms["Request"].Activate();
+                WindowState = FormWindowState.Normal;
             }
             else
             {

@@ -31,13 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(History));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.sessionssessioninfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tracking_SystemDataSet = new Tracking_System.Tracking_SystemDataSet();
-            this.button1 = new System.Windows.Forms.Button();
-            this.fillByToolStrip = new System.Windows.Forms.ToolStrip();
-            this.fillByToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.sessions_session_infoTableAdapter = new Tracking_System.Tracking_SystemDataSetTableAdapters.Sessions_session_infoTableAdapter();
-            this.tableAdapterManager1 = new Tracking_System.Tracking_SystemDataSetTableAdapters.TableAdapterManager();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.engineernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,6 +38,13 @@
             this.dateTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.macDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.commentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sessionssessioninfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tracking_SystemDataSet = new Tracking_System.Tracking_SystemDataSet();
+            this.button1 = new System.Windows.Forms.Button();
+            this.fillByToolStrip = new System.Windows.Forms.ToolStrip();
+            this.fillByToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.sessions_session_infoTableAdapter = new Tracking_System.Tracking_SystemDataSetTableAdapters.Sessions_session_infoTableAdapter();
+            this.tableAdapterManager1 = new Tracking_System.Tracking_SystemDataSetTableAdapters.TableAdapterManager();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sessionssessioninfoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tracking_SystemDataSet)).BeginInit();
@@ -75,54 +75,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(928, 455);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
-            // 
-            // sessionssessioninfoBindingSource
-            // 
-            this.sessionssessioninfoBindingSource.DataMember = "Sessions_session_info";
-            this.sessionssessioninfoBindingSource.DataSource = this.tracking_SystemDataSet;
-            // 
-            // tracking_SystemDataSet
-            // 
-            this.tracking_SystemDataSet.DataSetName = "Tracking_SystemDataSet";
-            this.tracking_SystemDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // button1
-            // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(444, 481);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(70, 33);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "Close";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // fillByToolStrip
-            // 
-            this.fillByToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fillByToolStripButton});
-            this.fillByToolStrip.Location = new System.Drawing.Point(0, 0);
-            this.fillByToolStrip.Name = "fillByToolStrip";
-            this.fillByToolStrip.Size = new System.Drawing.Size(951, 25);
-            this.fillByToolStrip.TabIndex = 23;
-            this.fillByToolStrip.Text = "fillByToolStrip";
-            this.fillByToolStrip.Visible = false;
-            // 
-            // fillByToolStripButton
-            // 
-            this.fillByToolStripButton.Name = "fillByToolStripButton";
-            this.fillByToolStripButton.Size = new System.Drawing.Size(23, 22);
-            // 
-            // sessions_session_infoTableAdapter
-            // 
-            this.sessions_session_infoTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager1
-            // 
-            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager1.Sessions_session_infoTableAdapter = this.sessions_session_infoTableAdapter;
-            this.tableAdapterManager1.UpdateOrder = Tracking_System.Tracking_SystemDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -187,6 +139,54 @@
             this.commentDataGridViewTextBoxColumn.ReadOnly = true;
             this.commentDataGridViewTextBoxColumn.Width = 76;
             // 
+            // sessionssessioninfoBindingSource
+            // 
+            this.sessionssessioninfoBindingSource.DataMember = "Sessions_session_info";
+            this.sessionssessioninfoBindingSource.DataSource = this.tracking_SystemDataSet;
+            // 
+            // tracking_SystemDataSet
+            // 
+            this.tracking_SystemDataSet.DataSetName = "Tracking_SystemDataSet";
+            this.tracking_SystemDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(444, 481);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(70, 33);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "Close";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // fillByToolStrip
+            // 
+            this.fillByToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fillByToolStripButton});
+            this.fillByToolStrip.Location = new System.Drawing.Point(0, 0);
+            this.fillByToolStrip.Name = "fillByToolStrip";
+            this.fillByToolStrip.Size = new System.Drawing.Size(951, 25);
+            this.fillByToolStrip.TabIndex = 23;
+            this.fillByToolStrip.Text = "fillByToolStrip";
+            this.fillByToolStrip.Visible = false;
+            // 
+            // fillByToolStripButton
+            // 
+            this.fillByToolStripButton.Name = "fillByToolStripButton";
+            this.fillByToolStripButton.Size = new System.Drawing.Size(23, 22);
+            // 
+            // sessions_session_infoTableAdapter
+            // 
+            this.sessions_session_infoTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager1
+            // 
+            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager1.Sessions_session_infoTableAdapter = this.sessions_session_infoTableAdapter;
+            this.tableAdapterManager1.UpdateOrder = Tracking_System.Tracking_SystemDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
             // History
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -198,6 +198,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "History";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "History";
