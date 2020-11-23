@@ -257,6 +257,16 @@ namespace Tracking_System
             his.VNC_password =password;
         }
 
+        private void Start_Click(object sender, EventArgs e)
+        {
+            btn_1_Click(sender,e);
+        }
+
+        private void Stop_Click(object sender, EventArgs e)
+        {
+            btn_stop_Click(sender, e);
+        }
+
         private void btn_stop_Click(object sender, EventArgs e)
         {
             new_ip = "";

@@ -48,12 +48,12 @@
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.history_btn = new System.Windows.Forms.Button();
             this.Menu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.History = new System.Windows.Forms.ToolStripMenuItem();
             this.Start = new System.Windows.Forms.ToolStripMenuItem();
             this.Stop = new System.Windows.Forms.ToolStripMenuItem();
             this.Exit = new System.Windows.Forms.ToolStripMenuItem();
-            this.History = new System.Windows.Forms.ToolStripMenuItem();
+            this.history_btn = new System.Windows.Forms.Button();
             this.Menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -232,6 +232,43 @@
             this.notifyIcon1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseClick);
             this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
             // 
+            // Menu
+            // 
+            this.Menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.History,
+            this.Start,
+            this.Stop,
+            this.Exit});
+            this.Menu.Name = "Menu";
+            this.Menu.Size = new System.Drawing.Size(153, 114);
+            // 
+            // History
+            // 
+            this.History.Name = "History";
+            this.History.Size = new System.Drawing.Size(152, 22);
+            this.History.Text = "History";
+            // 
+            // Start
+            // 
+            this.Start.Name = "Start";
+            this.Start.Size = new System.Drawing.Size(152, 22);
+            this.Start.Text = "Start";
+            this.Start.Click += new System.EventHandler(this.Start_Click);
+            // 
+            // Stop
+            // 
+            this.Stop.Name = "Stop";
+            this.Stop.Size = new System.Drawing.Size(152, 22);
+            this.Stop.Text = "Stop";
+            this.Stop.Click += new System.EventHandler(this.Stop_Click);
+            // 
+            // Exit
+            // 
+            this.Exit.Name = "Exit";
+            this.Exit.Size = new System.Drawing.Size(152, 22);
+            this.Exit.Text = "Exit";
+            this.Exit.Click += new System.EventHandler(this.Exit_Click);
+            // 
             // history_btn
             // 
             this.history_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -242,41 +279,6 @@
             this.history_btn.Text = "History";
             this.history_btn.UseVisualStyleBackColor = true;
             this.history_btn.Click += new System.EventHandler(this.history_btn_Click);
-            // 
-            // Menu
-            // 
-            this.Menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.History,
-            this.Start,
-            this.Stop,
-            this.Exit});
-            this.Menu.Name = "Menu";
-            this.Menu.Size = new System.Drawing.Size(113, 92);
-            // 
-            // Start
-            // 
-            this.Start.Name = "Start";
-            this.Start.Size = new System.Drawing.Size(112, 22);
-            this.Start.Text = "Start";
-            // 
-            // Stop
-            // 
-            this.Stop.Name = "Stop";
-            this.Stop.Size = new System.Drawing.Size(112, 22);
-            this.Stop.Text = "Stop";
-            // 
-            // Exit
-            // 
-            this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(112, 22);
-            this.Exit.Text = "Exit";
-            this.Exit.Click += new System.EventHandler(this.Exit_Click);
-            // 
-            // History
-            // 
-            this.History.Name = "History";
-            this.History.Size = new System.Drawing.Size(112, 22);
-            this.History.Text = "History";
             // 
             // Server_Form
             // 
