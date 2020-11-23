@@ -54,6 +54,7 @@
             this.Stop = new System.Windows.Forms.ToolStripMenuItem();
             this.Exit = new System.Windows.Forms.ToolStripMenuItem();
             this.history_btn = new System.Windows.Forms.Button();
+            this.Admin_btn = new System.Windows.Forms.Button();
             this.Menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -240,32 +241,32 @@
             this.Stop,
             this.Exit});
             this.Menu.Name = "Menu";
-            this.Menu.Size = new System.Drawing.Size(153, 114);
+            this.Menu.Size = new System.Drawing.Size(113, 92);
             // 
             // History
             // 
             this.History.Name = "History";
-            this.History.Size = new System.Drawing.Size(152, 22);
+            this.History.Size = new System.Drawing.Size(112, 22);
             this.History.Text = "History";
             // 
             // Start
             // 
             this.Start.Name = "Start";
-            this.Start.Size = new System.Drawing.Size(152, 22);
+            this.Start.Size = new System.Drawing.Size(112, 22);
             this.Start.Text = "Start";
             this.Start.Click += new System.EventHandler(this.Start_Click);
             // 
             // Stop
             // 
             this.Stop.Name = "Stop";
-            this.Stop.Size = new System.Drawing.Size(152, 22);
+            this.Stop.Size = new System.Drawing.Size(112, 22);
             this.Stop.Text = "Stop";
             this.Stop.Click += new System.EventHandler(this.Stop_Click);
             // 
             // Exit
             // 
             this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(152, 22);
+            this.Exit.Size = new System.Drawing.Size(112, 22);
             this.Exit.Text = "Exit";
             this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
@@ -280,6 +281,17 @@
             this.history_btn.UseVisualStyleBackColor = true;
             this.history_btn.Click += new System.EventHandler(this.history_btn_Click);
             // 
+            // Admin_btn
+            // 
+            this.Admin_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Admin_btn.Location = new System.Drawing.Point(3, 0);
+            this.Admin_btn.Name = "Admin_btn";
+            this.Admin_btn.Size = new System.Drawing.Size(51, 32);
+            this.Admin_btn.TabIndex = 23;
+            this.Admin_btn.Text = "Admin";
+            this.Admin_btn.UseVisualStyleBackColor = true;
+            this.Admin_btn.Click += new System.EventHandler(this.Admin_btn_Click);
+            // 
             // Server_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -287,6 +299,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(336, 234);
+            this.Controls.Add(this.Admin_btn);
             this.Controls.Add(this.history_btn);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_stop);
@@ -342,6 +355,7 @@
         private System.Windows.Forms.ToolStripMenuItem Stop;
         private System.Windows.Forms.ToolStripMenuItem Exit;
         private System.Windows.Forms.ToolStripMenuItem History;
+        private System.Windows.Forms.Button Admin_btn;
     }
 }
 

@@ -69,6 +69,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Alert.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +120,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Tracking_SystemDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Tracking_SystemDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Tracking_SystemDataSet1.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Alert.resx">
       <DependentUpon>Form_Alert.cs</DependentUpon>
     </EmbeddedResource>
@@ -154,6 +168,17 @@
     </None>
     <None Include="Tracking_SystemDataSet.xss">
       <DependentUpon>Tracking_SystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Tracking_SystemDataSet1.xsc">
+      <DependentUpon>Tracking_SystemDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Tracking_SystemDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Tracking_SystemDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Tracking_SystemDataSet1.xss">
+      <DependentUpon>Tracking_SystemDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

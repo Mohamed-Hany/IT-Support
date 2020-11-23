@@ -267,6 +267,12 @@ namespace Tracking_System
             btn_stop_Click(sender, e);
         }
 
+        private void Admin_btn_Click(object sender, EventArgs e)
+        {
+            Admin admin = new Admin();
+            admin.Show();
+        }
+
         private void btn_stop_Click(object sender, EventArgs e)
         {
             new_ip = "";
