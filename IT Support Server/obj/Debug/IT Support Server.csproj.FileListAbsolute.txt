@@ -39,7 +39,6 @@ D:\IT-Support\IT Support Server\obj\Debug\IT Support Server.exe
 D:\IT-Support\IT Support Server\obj\Debug\IT Support Server.pdb
 D:\IT-Support\IT Support Server\bin\Debug\IT Support Server.exe
 D:\IT-Support\IT Support Server\bin\Debug\IT Support Server.pdb
-D:\IT-Support\IT Support Server\obj\Debug\IT Support Server.csprojResolveAssemblyReference.cache
 D:\IT-Support\IT Support Server\obj\Debug\CustomAlertBoxDemo.Form_Alert.resources
 D:\IT-Support\IT Support Server\obj\Debug\Tracking_System.History.resources
 D:\IT-Support\IT Support Server\obj\Debug\Tracking_System.login.resources
@@ -62,3 +61,6 @@ D:\C#_Projects\IT-Support\IT Support Server\bin\Debug\IT Support Server.pdb
 D:\C#_Projects\IT-Support\IT Support Server\obj\Debug\IT Support Server.csprojAssemblyReference.cache
 D:\C#_Projects\IT-Support\IT Support Server\obj\Debug\Tracking_System.Admin.resources
 D:\C#_Projects\IT-Support\IT Support Server\obj\Debug\IT Support Server.csproj.CoreCompileInputs.cache
+D:\IT-Support\IT Support Server\obj\Debug\IT Support Server.csprojAssemblyReference.cache
+D:\IT-Support\IT Support Server\obj\Debug\Tracking_System.Admin.resources
+D:\IT-Support\IT Support Server\obj\Debug\IT Support Server.csproj.CoreCompileInputs.cache

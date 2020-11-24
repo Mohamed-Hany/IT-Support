@@ -267,10 +267,16 @@ namespace Tracking_System
             btn_stop_Click(sender, e);
         }
 
-        private void Admin_btn_Click(object sender, EventArgs e)
+        private void adminToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Admin admin = new Admin();
             admin.Show();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            notifyIcon1.Dispose();
+            Environment.Exit(0);
         }
 
         private void btn_stop_Click(object sender, EventArgs e)
