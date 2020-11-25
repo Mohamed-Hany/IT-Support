@@ -19,7 +19,7 @@ namespace Tracking_System_Client
         }
 
         string connetionString = @"Data Source=130.7.1.24;Initial Catalog=Tracking_System;User ID=sa;Password=zxc-1234";
-        Int32 port = 8081;
+        //Int32 port = 8081;
         public string host = "";
         public string ip = "";
         public string macAddresses = "";
