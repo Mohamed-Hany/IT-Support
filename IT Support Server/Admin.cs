@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Tracking_System
@@ -42,15 +35,15 @@ namespace Tracking_System
 
         private void btn_new_Click(object sender, EventArgs e)
         {
-                    SqlConnection con = new SqlConnection(connetionString);
-                    string sql = "insert into Tracking_System.dbo.Engineers_engineers(name, ip_add, engineer_id, domain_id, port) values(@name,@ip_add,@engineer_id,@domain_id,@port)";
+            SqlConnection con = new SqlConnection(connetionString);
+            string sql = "insert into Tracking_System.dbo.Engineers_engineers(name, ip_add, engineer_id, domain_id, port) values(@name,@ip_add,@engineer_id,@domain_id,@port)";
                     using (SqlCommand sqlcom = new SqlCommand(sql, con))
                     {
-                        sqlcom.Parameters.AddWithValue("@name", txt_name.Text.ToString());
-                        sqlcom.Parameters.AddWithValue("@ip_add",txt_ip.Text.ToString());
-                        sqlcom.Parameters.AddWithValue("@engineer_id", txt_id.Text.ToString());
-                        sqlcom.Parameters.AddWithValue("@domain_id", txt_domain.ToString());
-                        sqlcom.Parameters.AddWithValue("@port", txt_port.Text.ToString());
+                        sqlcom.Parameters.AddWithValue("@name", txt_name.Text);
+                        sqlcom.Parameters.AddWithValue("@ip_add",txt_ip.Text);
+                        sqlcom.Parameters.AddWithValue("@engineer_id", txt_id.Text);
+                        sqlcom.Parameters.AddWithValue("@domain_id", txt_domain.Text);
+                        sqlcom.Parameters.AddWithValue("@port", txt_port.Text);
                         con.Open();
                         sqlcom.ExecuteScalar();
                         con.Close();
@@ -86,6 +79,24 @@ namespace Tracking_System
             {
                 MessageBox.Show("Please Select Record to Delete");
             }
+        }
+
+        private void btn_edit_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(connetionString);
+            string sql =
+               "UPDATE Tracking_System.dbo.Engineers_engineers SET name='" + txt_name.Text +
+               "',ip_add ='"+ txt_ip.Text + "',engineer_id ='" + txt_id.Text+ "',domain_id ='" + txt_domain.Text +
+               "',port='"+ txt_port.Text + "' WHERE id ='" + ID + "'";
+            SqlCommand sqlcom = new SqlCommand(sql, con);
+            con.Open();
+                sqlcom.ExecuteScalar();
+                con.Close();
+            MessageBox.Show("Record Updated Successfully!");
+
+
+            this.engineers_engineersTableAdapter.Fill(this.tracking_SystemDataSet1.Engineers_engineers);
+            ClearData();
         }
     }
 }
