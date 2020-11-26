@@ -75,6 +75,7 @@ namespace Tracking_System
                 {
                     post();
                 }
+                MessageBox.Show("Your request saved successfully");
             }
             else
             {
@@ -82,6 +83,7 @@ namespace Tracking_System
                 {
                     post();
                 }
+                MessageBox.Show("Your request saved successfully");
             }
 
             this.Close();
