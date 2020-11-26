@@ -37,17 +37,18 @@ namespace Tracking_System
         {
             SqlConnection con = new SqlConnection(connetionString);
             string sql = "insert into Tracking_System.dbo.Engineers_engineers(name, ip_add, engineer_id, domain_id, port) values(@name,@ip_add,@engineer_id,@domain_id,@port)";
-                    using (SqlCommand sqlcom = new SqlCommand(sql, con))
-                    {
-                        sqlcom.Parameters.AddWithValue("@name", txt_name.Text);
-                        sqlcom.Parameters.AddWithValue("@ip_add",txt_ip.Text);
-                        sqlcom.Parameters.AddWithValue("@engineer_id", txt_id.Text);
-                        sqlcom.Parameters.AddWithValue("@domain_id", txt_domain.Text);
-                        sqlcom.Parameters.AddWithValue("@port", txt_port.Text);
-                        con.Open();
-                        sqlcom.ExecuteScalar();
-                        con.Close();
-                    }
+                using (SqlCommand sqlcom = new SqlCommand(sql, con))
+                {
+                    sqlcom.Parameters.AddWithValue("@name", txt_name.Text);
+                    sqlcom.Parameters.AddWithValue("@ip_add",txt_ip.Text);
+                    sqlcom.Parameters.AddWithValue("@engineer_id", txt_id.Text);
+                    sqlcom.Parameters.AddWithValue("@domain_id", txt_domain.Text);
+                    sqlcom.Parameters.AddWithValue("@port", txt_port.Text);
+                    con.Open();
+                    sqlcom.ExecuteScalar();
+                    con.Close();
+                }
+            MessageBox.Show("New Engineer add Successfully!");
             this.engineers_engineersTableAdapter.Fill(this.tracking_SystemDataSet1.Engineers_engineers);
             ClearData();
         }
@@ -85,16 +86,14 @@ namespace Tracking_System
         {
             SqlConnection con = new SqlConnection(connetionString);
             string sql =
-               "UPDATE Tracking_System.dbo.Engineers_engineers SET name='" + txt_name.Text +
-               "',ip_add ='"+ txt_ip.Text + "',engineer_id ='" + txt_id.Text+ "',domain_id ='" + txt_domain.Text +
-               "',port='"+ txt_port.Text + "' WHERE id ='" + ID + "'";
+                "UPDATE Tracking_System.dbo.Engineers_engineers SET name='" + txt_name.Text +
+                "',ip_add ='"+ txt_ip.Text + "',engineer_id ='" + txt_id.Text+ "',domain_id ='" + txt_domain.Text +
+                "',port='"+ txt_port.Text + "' WHERE id ='" + ID + "'";
             SqlCommand sqlcom = new SqlCommand(sql, con);
             con.Open();
-                sqlcom.ExecuteScalar();
-                con.Close();
+            sqlcom.ExecuteScalar();
+            con.Close();
             MessageBox.Show("Record Updated Successfully!");
-
-
             this.engineers_engineersTableAdapter.Fill(this.tracking_SystemDataSet1.Engineers_engineers);
             ClearData();
         }
