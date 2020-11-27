@@ -32,12 +32,6 @@ namespace Tracking_System
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.engineeridDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.domainidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ipaddDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.portDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.engineersengineersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tracking_SystemDataSet1 = new Tracking_System.Tracking_SystemDataSet1();
             this.engineers_engineersTableAdapter = new Tracking_System.Tracking_SystemDataSet1TableAdapters.Engineers_engineersTableAdapter();
@@ -55,7 +49,12 @@ namespace Tracking_System
             this.label4 = new System.Windows.Forms.Label();
             this.btn_edit = new System.Windows.Forms.Button();
             this.btn_del = new System.Windows.Forms.Button();
-            this.btn_save = new System.Windows.Forms.Button();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.engineeridDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.domainidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ipaddDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.portDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.engineersengineersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tracking_SystemDataSet1)).BeginInit();
@@ -79,55 +78,6 @@ namespace Tracking_System
             this.dataGridView1.Size = new System.Drawing.Size(776, 291);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "No.";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Width = 49;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.Width = 60;
-            // 
-            // engineeridDataGridViewTextBoxColumn
-            // 
-            this.engineeridDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.engineeridDataGridViewTextBoxColumn.DataPropertyName = "engineer_id";
-            this.engineeridDataGridViewTextBoxColumn.HeaderText = "Engineer ID";
-            this.engineeridDataGridViewTextBoxColumn.Name = "engineeridDataGridViewTextBoxColumn";
-            this.engineeridDataGridViewTextBoxColumn.Width = 88;
-            // 
-            // domainidDataGridViewTextBoxColumn
-            // 
-            this.domainidDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.domainidDataGridViewTextBoxColumn.DataPropertyName = "domain_id";
-            this.domainidDataGridViewTextBoxColumn.HeaderText = "Domain User";
-            this.domainidDataGridViewTextBoxColumn.Name = "domainidDataGridViewTextBoxColumn";
-            this.domainidDataGridViewTextBoxColumn.Width = 93;
-            // 
-            // ipaddDataGridViewTextBoxColumn
-            // 
-            this.ipaddDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ipaddDataGridViewTextBoxColumn.DataPropertyName = "ip_add";
-            this.ipaddDataGridViewTextBoxColumn.HeaderText = "IP Address";
-            this.ipaddDataGridViewTextBoxColumn.Name = "ipaddDataGridViewTextBoxColumn";
-            this.ipaddDataGridViewTextBoxColumn.Width = 83;
-            // 
-            // portDataGridViewTextBoxColumn
-            // 
-            this.portDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.portDataGridViewTextBoxColumn.DataPropertyName = "port";
-            this.portDataGridViewTextBoxColumn.HeaderText = "Port";
-            this.portDataGridViewTextBoxColumn.Name = "portDataGridViewTextBoxColumn";
-            this.portDataGridViewTextBoxColumn.Width = 51;
             // 
             // engineersengineersBindingSource
             // 
@@ -172,7 +122,7 @@ namespace Tracking_System
             this.txt_name.Location = new System.Drawing.Point(118, 312);
             this.txt_name.Name = "txt_name";
             this.txt_name.Size = new System.Drawing.Size(217, 23);
-            this.txt_name.TabIndex = 31;
+            this.txt_name.TabIndex = 1;
             // 
             // lbl_connected
             // 
@@ -190,7 +140,7 @@ namespace Tracking_System
             this.txt_domain.Location = new System.Drawing.Point(118, 349);
             this.txt_domain.Name = "txt_domain";
             this.txt_domain.Size = new System.Drawing.Size(126, 23);
-            this.txt_domain.TabIndex = 33;
+            this.txt_domain.TabIndex = 4;
             // 
             // label1
             // 
@@ -206,9 +156,10 @@ namespace Tracking_System
             // 
             this.txt_ip.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_ip.Location = new System.Drawing.Point(465, 309);
+            this.txt_ip.MaxLength = 15;
             this.txt_ip.Name = "txt_ip";
             this.txt_ip.Size = new System.Drawing.Size(129, 23);
-            this.txt_ip.TabIndex = 35;
+            this.txt_ip.TabIndex = 2;
             // 
             // label2
             // 
@@ -226,7 +177,7 @@ namespace Tracking_System
             this.txt_id.Location = new System.Drawing.Point(371, 349);
             this.txt_id.Name = "txt_id";
             this.txt_id.Size = new System.Drawing.Size(129, 23);
-            this.txt_id.TabIndex = 37;
+            this.txt_id.TabIndex = 5;
             // 
             // label3
             // 
@@ -242,9 +193,11 @@ namespace Tracking_System
             // 
             this.txt_port.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_port.Location = new System.Drawing.Point(679, 309);
+            this.txt_port.MaxLength = 6;
             this.txt_port.Name = "txt_port";
             this.txt_port.Size = new System.Drawing.Size(67, 23);
-            this.txt_port.TabIndex = 39;
+            this.txt_port.TabIndex = 3;
+            this.txt_port.TextChanged += new System.EventHandler(this.txt_port_TextChanged);
             // 
             // label4
             // 
@@ -278,22 +231,61 @@ namespace Tracking_System
             this.btn_del.UseVisualStyleBackColor = true;
             this.btn_del.Click += new System.EventHandler(this.btn_del_Click);
             // 
-            // btn_save
+            // idDataGridViewTextBoxColumn
             // 
-            this.btn_save.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_save.Location = new System.Drawing.Point(646, 405);
-            this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(66, 33);
-            this.btn_save.TabIndex = 43;
-            this.btn_save.Text = "Save";
-            this.btn_save.UseVisualStyleBackColor = true;
+            this.idDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "No.";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Visible = false;
+            this.idDataGridViewTextBoxColumn.Width = 49;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // engineeridDataGridViewTextBoxColumn
+            // 
+            this.engineeridDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.engineeridDataGridViewTextBoxColumn.DataPropertyName = "engineer_id";
+            this.engineeridDataGridViewTextBoxColumn.HeaderText = "Engineer ID";
+            this.engineeridDataGridViewTextBoxColumn.Name = "engineeridDataGridViewTextBoxColumn";
+            this.engineeridDataGridViewTextBoxColumn.Width = 88;
+            // 
+            // domainidDataGridViewTextBoxColumn
+            // 
+            this.domainidDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.domainidDataGridViewTextBoxColumn.DataPropertyName = "domain_id";
+            this.domainidDataGridViewTextBoxColumn.HeaderText = "Domain User";
+            this.domainidDataGridViewTextBoxColumn.Name = "domainidDataGridViewTextBoxColumn";
+            this.domainidDataGridViewTextBoxColumn.Width = 93;
+            // 
+            // ipaddDataGridViewTextBoxColumn
+            // 
+            this.ipaddDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ipaddDataGridViewTextBoxColumn.DataPropertyName = "ip_add";
+            this.ipaddDataGridViewTextBoxColumn.HeaderText = "IP Address";
+            this.ipaddDataGridViewTextBoxColumn.Name = "ipaddDataGridViewTextBoxColumn";
+            this.ipaddDataGridViewTextBoxColumn.Width = 83;
+            // 
+            // portDataGridViewTextBoxColumn
+            // 
+            this.portDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.portDataGridViewTextBoxColumn.DataPropertyName = "port";
+            this.portDataGridViewTextBoxColumn.HeaderText = "Port";
+            this.portDataGridViewTextBoxColumn.Name = "portDataGridViewTextBoxColumn";
+            this.portDataGridViewTextBoxColumn.Width = 51;
             // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btn_save);
             this.Controls.Add(this.btn_del);
             this.Controls.Add(this.btn_edit);
             this.Controls.Add(this.txt_port);
@@ -331,12 +323,6 @@ namespace Tracking_System
         private Tracking_SystemDataSet1 tracking_SystemDataSet1;
         private System.Windows.Forms.BindingSource engineersengineersBindingSource;
         private Tracking_SystemDataSet1TableAdapters.Engineers_engineersTableAdapter engineers_engineersTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn engineeridDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn domainidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ipaddDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn portDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btn_new;
         private System.Windows.Forms.TextBox txt_name;
@@ -351,6 +337,11 @@ namespace Tracking_System
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btn_edit;
         private System.Windows.Forms.Button btn_del;
-        private System.Windows.Forms.Button btn_save;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn engineeridDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn domainidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ipaddDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn portDataGridViewTextBoxColumn;
     }
 }

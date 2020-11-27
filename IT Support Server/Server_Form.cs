@@ -279,6 +279,22 @@ namespace Tracking_System
             Environment.Exit(0);
         }
 
+        private void txt_new_ip_KeyDown(object sender, KeyEventArgs e)
+        {
+                if (e.KeyCode == Keys.Enter)
+                {
+                    button1_Click(this, new EventArgs());
+                }
+        }
+
+        private void txt_old_ip_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button1_Click(this, new EventArgs());
+            }
+        }
+
         private void btn_stop_Click(object sender, EventArgs e)
         {
             new_ip = "";
@@ -360,19 +376,9 @@ namespace Tracking_System
             }
             else
             {
-                try
-                {
-                    Request req = new Request();
-                    req.Requster_name = client_data[1];
-                    req.eng_name = Get_eng_name();
-                    req.Show();
-                }
-                catch (Exception)
-                {
                     Request req = new Request();
                     req.eng_name = Get_eng_name();
                     req.Show();
-                }
             }
         }
 

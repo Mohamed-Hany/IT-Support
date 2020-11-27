@@ -192,6 +192,7 @@
             this.txt_new_ip.Name = "txt_new_ip";
             this.txt_new_ip.Size = new System.Drawing.Size(129, 23);
             this.txt_new_ip.TabIndex = 18;
+            this.txt_new_ip.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_new_ip_KeyDown);
             // 
             // txt_old_ip
             // 
@@ -200,6 +201,7 @@
             this.txt_old_ip.Name = "txt_old_ip";
             this.txt_old_ip.Size = new System.Drawing.Size(129, 23);
             this.txt_old_ip.TabIndex = 19;
+            this.txt_old_ip.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_old_ip_KeyDown);
             // 
             // btn_stop
             // 
@@ -235,8 +237,6 @@
             this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
             this.notifyIcon1.Text = "notifyIcon1";
             this.notifyIcon1.Visible = true;
-            this.notifyIcon1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseClick);
-            this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
             // 
             // Menu
             // 
@@ -295,6 +295,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mainToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -315,14 +316,14 @@
             // adminToolStripMenuItem
             // 
             this.adminToolStripMenuItem.Name = "adminToolStripMenuItem";
-            this.adminToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.adminToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
             this.adminToolStripMenuItem.Text = "Admin";
             this.adminToolStripMenuItem.Click += new System.EventHandler(this.adminToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 

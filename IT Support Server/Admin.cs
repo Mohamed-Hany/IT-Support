@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data.SqlClient;
+using System.DirectoryServices;
 using System.Windows.Forms;
 
 namespace Tracking_System
@@ -96,6 +97,15 @@ namespace Tracking_System
             MessageBox.Show("Record Updated Successfully!");
             this.engineers_engineersTableAdapter.Fill(this.tracking_SystemDataSet1.Engineers_engineers);
             ClearData();
+        }
+
+        private void txt_port_TextChanged(object sender, EventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(txt_port.Text, "[^0-9]"))
+            {
+                MessageBox.Show("Please enter only numbers.");
+                txt_port.Text = txt_port.Text.Remove(txt_port.Text.Length - 1);
+            }
         }
     }
 }
