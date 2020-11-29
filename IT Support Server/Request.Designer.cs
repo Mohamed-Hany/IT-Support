@@ -72,6 +72,7 @@
             this.txt_requester_name.Name = "txt_requester_name";
             this.txt_requester_name.Size = new System.Drawing.Size(275, 23);
             this.txt_requester_name.TabIndex = 20;
+            this.txt_requester_name.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_requester_name_KeyDown);
             // 
             // lbl_user
             // 

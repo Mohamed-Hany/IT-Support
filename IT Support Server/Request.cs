@@ -1,6 +1,10 @@
 ﻿using System;
 using System.Data.SqlClient;
+using System.DirectoryServices;
+using System.DirectoryServices.AccountManagement;
+using System.DirectoryServices.ActiveDirectory;
 using System.Net.Http;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Windows.Forms;
 
@@ -11,10 +15,16 @@ namespace Tracking_System
         public Request()
         {
             InitializeComponent();
+            LDAPDomainName = GetDomainDN(IPGlobalProperties.GetIPGlobalProperties().DomainName);
+
         }
         public string Requster_name { get; set; }
         public string eng_name { get; set; }
         public int sql_id { get; set; }
+        private string LDAPDomainName = string.Empty;
+        private string username = string.Empty;
+        private DirectoryEntry user;
+        private string fullname = String.Empty;
 
         string connetionString = @"Data Source=130.7.1.24;Initial Catalog=Tracking_System;User ID=sa;Password=zxc-1234";
         public async void post()
@@ -98,6 +108,54 @@ namespace Tracking_System
         {
             txt_requester_name.Text = Requster_name;
             txt_eng_name.Text = eng_name;
+        }
+        private string GetDomainDN(string domain)
+        {
+            DirectoryContext context = new DirectoryContext(DirectoryContextType.Domain, domain);
+            Domain d = Domain.GetDomain(context);
+            DirectoryEntry de = d.GetDirectoryEntry();
+            return de.Properties["DistinguishedName"].Value.ToString();
+        }
+        public DirectoryEntry GetUser(string userName)
+        {
+            DirectoryEntry directoryEntry = new DirectoryEntry("LDAP://" + LDAPDomainName);
+            DirectorySearcher directorySearcher = new DirectorySearcher(directoryEntry);
+            directorySearcher.Filter = "(&(objectCategory=person)(sAMAccountName=" + userName + "))";
+            DirectoryEntry result = directorySearcher.FindOne().GetDirectoryEntry();
+            return result;
+        }
+        public static bool UserExists(string userName)
+        {
+            using (var pc = new PrincipalContext(ContextType.Domain))
+            using (var p = Principal.FindByIdentity(pc, IdentityType.SamAccountName, userName))
+            {
+                return p != null;
+            }
+        }
+        private void GetUser()
+        {
+            if (UserExists(txt_requester_name.Text))
+            {
+                username = txt_requester_name.Text;
+
+                user = GetUser(username);
+
+                fullname = String.Format("{0} {1}", user.Properties["givenName"].Value.ToString(), user.Properties["sn"].Value.ToString());
+                txt_requester_name.Text = fullname;
+            }
+            else
+            {
+                txt_requester_name.Text = string.Empty;
+                MessageBox.Show("User doesn't exist.");
+            }
+        }
+
+        private void txt_requester_name_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                GetUser();
+            }
         }
     }
     
