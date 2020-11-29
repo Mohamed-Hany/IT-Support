@@ -19,18 +19,32 @@ namespace Tracking_System_Client
         }
 
         string connetionString = @"Data Source=130.7.1.24;Initial Catalog=Tracking_System;User ID=sa;Password=zxc-1234";
-        //Int32 port = 8081;
-        public string host = "";
-        public string ip = "";
-        public string macAddresses = "";
-        public string username = "";
-
+        public string host , username, macAddresses, ip , eng_name,status;
         private static readonly HttpClient client = new HttpClient();
 
         public string get_host()
         {
             host = Dns.GetHostEntry(ip).HostName;
             return host;
+        }
+        private string Get_eng_name()
+        {
+            try
+            {
+                SqlConnection conn = new SqlConnection(connetionString);
+                string sql = "SELECT name FROM Tracking_System.dbo.Engineers_engineers WHERE Engineer_id = '" + txt_1.Text + "'";
+                SqlCommand sqlcom = new SqlCommand(sql, conn);
+                conn.Open();
+                SqlDataReader sdr = sqlcom.ExecuteReader();
+                sdr.Read();
+                eng_name = sdr["name"].ToString();
+                conn.Close();
+            }
+            catch (Exception)
+            {
+
+            }
+            return eng_name;
         }
 
         public  string GetLocalIPAddress()
@@ -89,6 +103,20 @@ namespace Tracking_System_Client
             return int.Parse(server_port);
         }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (status == "connected")
+            {
+                lbl_Eng.Text = "Engineer : " + Get_eng_name();
+                timer1.Stop();
+            }
+            else
+            {
+
+            }
+
+        }
+
         public void Client_side()
         {
             try
@@ -115,18 +143,19 @@ namespace Tracking_System_Client
                 if (dataReceived.Contains("yes"))
                 {
                     MessageBox.Show("Your request has been accepted");
+                    status = "connected";
                     client.Close();
                 }
                 else if (dataReceived.Contains("no"))
                 {
                     MessageBox.Show("Your request has been cancelled");
+                    status = "disconnected";
                     client.Close();
                 }
 
             }
             catch (Exception)
             {
-             
                MessageBox.Show("Please Call 1010 To Get Support ID!");
             }
         }
@@ -139,7 +168,16 @@ namespace Tracking_System_Client
 
         private void btn_1_Click(object sender, EventArgs e)
         {
-            ClientTask();
+            if (txt_1.Text!="")
+            {
+                ClientTask();
+                timer1.Start();
+            }
+            else
+            {
+                MessageBox.Show("Please Call 1010 To Get Support ID!");   
+            }
+
         }
 
         private void TxetBox_Enter(object sender, KeyEventArgs e)

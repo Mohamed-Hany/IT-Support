@@ -46,19 +46,21 @@
             this.txt_old_ip = new System.Windows.Forms.TextBox();
             this.btn_stop = new System.Windows.Forms.Button();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_req = new System.Windows.Forms.Button();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.Menu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.History = new System.Windows.Forms.ToolStripMenuItem();
             this.Start = new System.Windows.Forms.ToolStripMenuItem();
             this.Stop = new System.Windows.Forms.ToolStripMenuItem();
             this.Exit = new System.Windows.Forms.ToolStripMenuItem();
-            this.history_btn = new System.Windows.Forms.Button();
+            this.btn_send = new System.Windows.Forms.Button();
             this.Admin_btn = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mainToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_Disconnect = new System.Windows.Forms.Button();
+            this.historyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Menu.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -66,7 +68,7 @@
             // btn_start
             // 
             this.btn_start.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_start.Location = new System.Drawing.Point(36, 144);
+            this.btn_start.Location = new System.Drawing.Point(27, 144);
             this.btn_start.Name = "btn_start";
             this.btn_start.Size = new System.Drawing.Size(70, 33);
             this.btn_start.TabIndex = 1;
@@ -130,7 +132,7 @@
             // btn_vnc
             // 
             this.btn_vnc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_vnc.Location = new System.Drawing.Point(144, 166);
+            this.btn_vnc.Location = new System.Drawing.Point(129, 144);
             this.btn_vnc.Name = "btn_vnc";
             this.btn_vnc.Size = new System.Drawing.Size(70, 33);
             this.btn_vnc.TabIndex = 11;
@@ -207,7 +209,7 @@
             // 
             this.btn_stop.Enabled = false;
             this.btn_stop.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_stop.Location = new System.Drawing.Point(36, 184);
+            this.btn_stop.Location = new System.Drawing.Point(27, 184);
             this.btn_stop.Name = "btn_stop";
             this.btn_stop.Size = new System.Drawing.Size(70, 33);
             this.btn_stop.TabIndex = 20;
@@ -220,16 +222,16 @@
             this.timer2.Interval = 6000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
-            // button1
+            // btn_req
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(242, 144);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(78, 33);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "Request";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_req.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_req.Location = new System.Drawing.Point(129, 184);
+            this.btn_req.Name = "btn_req";
+            this.btn_req.Size = new System.Drawing.Size(70, 33);
+            this.btn_req.TabIndex = 21;
+            this.btn_req.Text = "Request";
+            this.btn_req.UseVisualStyleBackColor = true;
+            this.btn_req.Click += new System.EventHandler(this.button1_Click);
             // 
             // notifyIcon1
             // 
@@ -275,16 +277,16 @@
             this.Exit.Text = "Exit";
             this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
-            // history_btn
+            // btn_send
             // 
-            this.history_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.history_btn.Location = new System.Drawing.Point(242, 184);
-            this.history_btn.Name = "history_btn";
-            this.history_btn.Size = new System.Drawing.Size(78, 33);
-            this.history_btn.TabIndex = 22;
-            this.history_btn.Text = "History";
-            this.history_btn.UseVisualStyleBackColor = true;
-            this.history_btn.Click += new System.EventHandler(this.history_btn_Click);
+            this.btn_send.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_send.Location = new System.Drawing.Point(222, 184);
+            this.btn_send.Name = "btn_send";
+            this.btn_send.Size = new System.Drawing.Size(90, 33);
+            this.btn_send.TabIndex = 22;
+            this.btn_send.Text = "Send files";
+            this.btn_send.UseVisualStyleBackColor = true;
+            this.btn_send.Click += new System.EventHandler(this.history_btn_Click);
             // 
             // Admin_btn
             // 
@@ -308,6 +310,7 @@
             // 
             this.mainToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.adminToolStripMenuItem,
+            this.historyToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.mainToolStripMenuItem.Name = "mainToolStripMenuItem";
             this.mainToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
@@ -316,16 +319,34 @@
             // adminToolStripMenuItem
             // 
             this.adminToolStripMenuItem.Name = "adminToolStripMenuItem";
-            this.adminToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
+            this.adminToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.adminToolStripMenuItem.Text = "Admin";
             this.adminToolStripMenuItem.Click += new System.EventHandler(this.adminToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // btn_Disconnect
+            // 
+            this.btn_Disconnect.Enabled = false;
+            this.btn_Disconnect.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Disconnect.Location = new System.Drawing.Point(222, 142);
+            this.btn_Disconnect.Name = "btn_Disconnect";
+            this.btn_Disconnect.Size = new System.Drawing.Size(90, 33);
+            this.btn_Disconnect.TabIndex = 26;
+            this.btn_Disconnect.Text = "Disconnect";
+            this.btn_Disconnect.UseVisualStyleBackColor = true;
+            // 
+            // historyToolStripMenuItem
+            // 
+            this.historyToolStripMenuItem.Name = "historyToolStripMenuItem";
+            this.historyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.historyToolStripMenuItem.Text = "History";
+            this.historyToolStripMenuItem.Click += new System.EventHandler(this.historyToolStripMenuItem_Click);
             // 
             // Server_Form
             // 
@@ -335,10 +356,11 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(336, 248);
             this.ContextMenuStrip = this.Menu;
+            this.Controls.Add(this.btn_Disconnect);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.Admin_btn);
-            this.Controls.Add(this.history_btn);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_send);
+            this.Controls.Add(this.btn_req);
             this.Controls.Add(this.btn_stop);
             this.Controls.Add(this.txt_old_ip);
             this.Controls.Add(this.txt_new_ip);
@@ -387,9 +409,9 @@
         private System.Windows.Forms.TextBox txt_old_ip;
         private System.Windows.Forms.Button btn_stop;
         private System.Windows.Forms.Timer timer2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_req;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
-        private System.Windows.Forms.Button history_btn;
+        private System.Windows.Forms.Button btn_send;
         private System.Windows.Forms.ContextMenuStrip Menu;
         private System.Windows.Forms.ToolStripMenuItem Start;
         private System.Windows.Forms.ToolStripMenuItem Stop;
@@ -400,6 +422,8 @@
         private System.Windows.Forms.ToolStripMenuItem mainToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem adminToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem historyToolStripMenuItem;
+        private System.Windows.Forms.Button btn_Disconnect;
     }
 }
 

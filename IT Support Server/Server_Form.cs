@@ -213,6 +213,14 @@ namespace Tracking_System
         private void timer1_Tick(object sender, EventArgs e)
         {
             txt_new_ip.Text = new_ip;
+            if (txt_new_ip.Text!="")
+            {
+                btn_Disconnect.Enabled = true;
+            }
+            else
+            {
+                btn_Disconnect.Enabled = false;
+            }
         }
         private void timer2_Tick(object sender, EventArgs e)
         {
@@ -252,9 +260,8 @@ namespace Tracking_System
 
         private void history_btn_Click(object sender, EventArgs e)
         {
-            History his = new History();
-            his.Show();
-            his.VNC_password =password;
+
+
         }
 
         private void Start_Click(object sender, EventArgs e)
@@ -283,7 +290,7 @@ namespace Tracking_System
         {
                 if (e.KeyCode == Keys.Enter)
                 {
-                    button1_Click(this, new EventArgs());
+                    btn_vnc_Click(this, new EventArgs());
                 }
         }
 
@@ -291,8 +298,15 @@ namespace Tracking_System
         {
             if (e.KeyCode == Keys.Enter)
             {
-                button1_Click(this, new EventArgs());
+                btn_vnc_Click(this, new EventArgs());
             }
+        }
+
+        private void historyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            History his = new History();
+            his.Show();
+            his.VNC_password = password;
         }
 
         private void btn_stop_Click(object sender, EventArgs e)
@@ -334,18 +348,26 @@ namespace Tracking_System
                     try
                     {
                         Request req = new Request();
-                        req.Requster_name = client_data[1];
+                        if (client_data != null)
+                        {
+                            req.Requster_name = client_data[1];
+                        }
+                        else
+                        {
+                            req.Requster_name = "";
+                        }
                         req.sql_id = modified;
                         req.eng_name = Get_eng_name();
                         req.Show();
                     }
-                    catch (Exception)
+                    catch (NullReferenceException)
                     {
                         Request req = new Request();
                         req.eng_name = Get_eng_name();
                         req.Show();
+                        throw;
                     }
-               }
+                }
 
             }
             else
@@ -357,7 +379,8 @@ namespace Tracking_System
 
         private void Server_Form_FormClosed(object sender, FormClosedEventArgs e)
         {
-            notifyIcon1.Visible=false;
+            notifyIcon1.Visible = false;
+            notifyIcon1.Dispose();
             Environment.Exit(0);
         }
 

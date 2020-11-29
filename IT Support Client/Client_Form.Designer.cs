@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Client_Form));
             this.lbl_1 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -36,6 +37,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txt_1 = new System.Windows.Forms.TextBox();
             this.btn_1 = new System.Windows.Forms.Button();
+            this.lbl_Eng = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,7 +58,7 @@
             this.label1.AutoSize = true;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.label1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(21, 150);
+            this.label1.Location = new System.Drawing.Point(21, 170);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 14);
             this.label1.TabIndex = 8;
@@ -66,7 +69,7 @@
             this.label2.AutoSize = true;
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.label2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(97, 150);
+            this.label2.Location = new System.Drawing.Point(97, 170);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(180, 14);
             this.label2.TabIndex = 9;
@@ -96,7 +99,7 @@
             // txt_1
             // 
             this.txt_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_1.Location = new System.Drawing.Point(175, 108);
+            this.txt_1.Location = new System.Drawing.Point(175, 128);
             this.txt_1.Name = "txt_1";
             this.txt_1.Size = new System.Drawing.Size(79, 26);
             this.txt_1.TabIndex = 13;
@@ -111,7 +114,7 @@
             this.btn_1.FlatAppearance.BorderSize = 2;
             this.btn_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_1.Location = new System.Drawing.Point(34, 107);
+            this.btn_1.Location = new System.Drawing.Point(34, 127);
             this.btn_1.Name = "btn_1";
             this.btn_1.Size = new System.Drawing.Size(123, 29);
             this.btn_1.TabIndex = 12;
@@ -119,13 +122,29 @@
             this.btn_1.UseVisualStyleBackColor = false;
             this.btn_1.Click += new System.EventHandler(this.btn_1_Click);
             // 
+            // lbl_Eng
+            // 
+            this.lbl_Eng.AutoSize = true;
+            this.lbl_Eng.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.lbl_Eng.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Eng.ForeColor = System.Drawing.Color.Red;
+            this.lbl_Eng.Location = new System.Drawing.Point(35, 99);
+            this.lbl_Eng.Name = "lbl_Eng";
+            this.lbl_Eng.Size = new System.Drawing.Size(0, 16);
+            this.lbl_Eng.TabIndex = 14;
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Client_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(292, 171);
+            this.ClientSize = new System.Drawing.Size(292, 192);
+            this.Controls.Add(this.lbl_Eng);
             this.Controls.Add(this.txt_1);
             this.Controls.Add(this.btn_1);
             this.Controls.Add(this.label3);
@@ -155,6 +174,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt_1;
         private System.Windows.Forms.Button btn_1;
+        private System.Windows.Forms.Label lbl_Eng;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

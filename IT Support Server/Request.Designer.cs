@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Request));
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.txt_requester_name = new System.Windows.Forms.TextBox();
             this.lbl_user = new System.Windows.Forms.Label();
             this.txt_eng_name = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,6 +42,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.Dup_txt_box = new System.Windows.Forms.TextBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // comboBox1
@@ -64,15 +64,6 @@
             this.comboBox1.Sorted = true;
             this.comboBox1.TabIndex = 12;
             this.comboBox1.Text = "Please type or select category";
-            // 
-            // txt_requester_name
-            // 
-            this.txt_requester_name.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_requester_name.Location = new System.Drawing.Point(141, 46);
-            this.txt_requester_name.Name = "txt_requester_name";
-            this.txt_requester_name.Size = new System.Drawing.Size(275, 23);
-            this.txt_requester_name.TabIndex = 20;
-            this.txt_requester_name.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_requester_name_KeyDown);
             // 
             // lbl_user
             // 
@@ -196,11 +187,22 @@
             this.Dup_txt_box.UseWaitCursor = true;
             this.Dup_txt_box.WordWrap = false;
             // 
+            // comboBox2
+            // 
+            this.comboBox2.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(141, 46);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(276, 24);
+            this.comboBox2.Sorted = true;
+            this.comboBox2.TabIndex = 35;
+            // 
             // Request
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(426, 240);
+            this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.Dup_txt_box);
             this.Controls.Add(this.label4);
@@ -212,7 +214,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txt_eng_name);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txt_requester_name);
             this.Controls.Add(this.lbl_user);
             this.Controls.Add(this.comboBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -231,7 +232,6 @@
         #endregion
 
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox txt_requester_name;
         private System.Windows.Forms.Label lbl_user;
         private System.Windows.Forms.TextBox txt_eng_name;
         private System.Windows.Forms.Label label1;
@@ -244,5 +244,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox Dup_txt_box;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }
