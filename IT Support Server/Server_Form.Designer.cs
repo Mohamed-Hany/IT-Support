@@ -61,6 +61,7 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_Disconnect = new System.Windows.Forms.Button();
             this.historyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.Menu.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -286,7 +287,7 @@
             this.btn_send.TabIndex = 22;
             this.btn_send.Text = "Send files";
             this.btn_send.UseVisualStyleBackColor = true;
-            this.btn_send.Click += new System.EventHandler(this.history_btn_Click);
+            this.btn_send.Click += new System.EventHandler(this.send_btn_Click);
             // 
             // Admin_btn
             // 
@@ -332,7 +333,6 @@
             // 
             // btn_Disconnect
             // 
-            this.btn_Disconnect.Enabled = false;
             this.btn_Disconnect.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Disconnect.Location = new System.Drawing.Point(222, 142);
             this.btn_Disconnect.Name = "btn_Disconnect";
@@ -340,6 +340,7 @@
             this.btn_Disconnect.TabIndex = 26;
             this.btn_Disconnect.Text = "Disconnect";
             this.btn_Disconnect.UseVisualStyleBackColor = true;
+            this.btn_Disconnect.Click += new System.EventHandler(this.btn_Disconnect_Click);
             // 
             // historyToolStripMenuItem
             // 
@@ -347,6 +348,10 @@
             this.historyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.historyToolStripMenuItem.Text = "History";
             this.historyToolStripMenuItem.Click += new System.EventHandler(this.historyToolStripMenuItem_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // Server_Form
             // 
@@ -424,6 +429,7 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem historyToolStripMenuItem;
         private System.Windows.Forms.Button btn_Disconnect;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 

@@ -103,14 +103,27 @@ namespace Tracking_System_Client
             return int.Parse(server_port);
         }
 
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            timer1.Stop();
+            if (Thread.CurrentThread.IsAlive==false&&lbl_Eng.Text != "")
+            {
+                lbl_Eng.Text = "";
+            }
+            else //if(status == "disconnected")
+            {
+
+            }
+        }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (status == "connected")
+            if (status == "connected" && Thread.CurrentThread.IsAlive)
             {
                 lbl_Eng.Text = "Engineer : " + Get_eng_name();
-                timer1.Stop();
+                
             }
-            else
+            else //if(status == "disconnected")
             {
 
             }
@@ -168,7 +181,8 @@ namespace Tracking_System_Client
 
         private void btn_1_Click(object sender, EventArgs e)
         {
-            if (txt_1.Text!="")
+            timer2.Start();
+            if (txt_1.Text!=""&&lbl_Eng.Text=="")
             {
                 ClientTask();
                 timer1.Start();

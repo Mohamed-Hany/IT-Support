@@ -15,7 +15,7 @@ namespace Tracking_System
     public partial class Server_Form : Form
     {
         string connetionString = @"Data Source=130.7.1.24;Initial Catalog=Tracking_System;User ID=sa;Password=zxc-1234";
-        string old_ip ,new_ip , client_mac , client_name , client_pc , eng_name , thread_id , result ;
+        string old_ip, new_ip, client_mac, client_name, client_pc, eng_name, thread_id, result, filePath;
         public int modified;
         string[] client_data;
         private static readonly HttpClient client = new HttpClient();
@@ -148,7 +148,7 @@ namespace Tracking_System
             byte[] buffer = new byte[client.ReceiveBufferSize];
             //---read incoming stream---
             int bytesRead = nwStream.Read(buffer, 0, client.ReceiveBufferSize);
-
+            
             //---convert the data received into a string---
             string dataReceived = Encoding.Default.GetString(buffer, 0, bytesRead);
             client_data = dataReceived.Split(':');
@@ -258,10 +258,14 @@ namespace Tracking_System
             Environment.Exit(0);
         }
 
-        private void history_btn_Click(object sender, EventArgs e)
+        private void send_btn_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Under Developing");
+            //if (openFileDialog1.ShowDialog(this) == DialogResult.OK)
+            //{
+            //    filePath = openFileDialog1.FileName;
 
-
+            //}
         }
 
         private void Start_Click(object sender, EventArgs e)
@@ -300,6 +304,11 @@ namespace Tracking_System
             {
                 btn_vnc_Click(this, new EventArgs());
             }
+        }
+
+        private void btn_Disconnect_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Under Developing"); 
         }
 
         private void historyToolStripMenuItem_Click(object sender, EventArgs e)
